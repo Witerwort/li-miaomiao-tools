@@ -1,0 +1,37 @@
+name: Publish updater migration packages
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-updater-migration.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Download and verify already-built public release packages
+        run: |
+          python3 - <<'PYTHON'
+          import hashlib,json,time,urllib.request
+          from pathlib import Path
+          jobs = [{'name': 'kanhai-suite-1.1.11.zip', 'url': 'https://li-miaomiao-tools.coops859.chatgpt.site/download/kanhai-suite-1.1.11-updater-r2026110603.zip', 'size': 254446708, 'sha256': '96345b0343ea6889845cfbc3290993d747e4950827d8088d62f97a68ff20aa0c'}, {'name': 'kanhai-suite-1.1.12.zip', 'url': 'https://li-miaomiao-tools.coops859.chatgpt.site/download/kanhai-suite-1.1.12-updater-r2026110603.zip', 'size': 254484005, 'sha256': 'bade1ac34c29661c9755ea6bcb1e090a3f15ad07c0fbc5219d81f6471c6616b7'}, {'name': 'kanhai-suite-1.1.13.zip', 'url': 'https://li-miaomiao-tools.coops859.chatgpt.site/download/kanhai-suite-1.1.13-r2026110603.zip', 'size': 188849697, 'sha256': '7ab24bce194cec788d3f2aff17fc364df594a904235edaae07fff005625a3af0'}]
+          for job in jobs:
+              for attempt in range(15):
+                  try:
+                      with urllib.request.urlopen(job['url'], timeout=120) as response, open(job['name'], 'wb') as output:
+                          while data := response.read(1024*1024): output.write(data)
+                      with open(job['name'],'rb') as source: digest=hashlib.file_digest(source,'sha256').hexdigest()
+                      assert Path(job['name']).stat().st_size==job['size'] and digest==job['sha256'], 'Release size/SHA-256 mismatch'
+                      print('Verified',job['name'],digest)
+                      break
+                  except Exception:
+                      if attempt==14: raise
+                      time.sleep(20)
+          PYTHON
+      - name: Publish immutable migration release
+        run: |
+          gh release create v1.1.13-updater-2026110603 kanhai-suite-1.1.11.zip kanhai-suite-1.1.12.zip kanhai-suite-1.1.13.zip --repo Witerwort/li-miaomiao-tools --title '更新源迁移修订：1.1.11 / 1.1.12 / 1.1.13' --notes '更新检查迁移到 GitHub Pages，安装包通过 GitHub Releases 下载。旧站无法访问时，请完整覆盖本迁移包一次；后续可在工具内更新。保留配置、版本忽略、文件校验、跨盘更新和缓存自动清理。'
