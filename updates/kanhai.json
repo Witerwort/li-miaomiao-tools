@@ -1,37 +1,32 @@
 {
-    "version":  "1.2.0",
-    "revision":  2026110803,
-    "url":  "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.0/kanhai-suite-1.2.0-bridge.zip",
-    "sha256":  "6FB29A5F1E5053E3FDBBD8E214D805210C0E48CA8E625499E76B390CEB6D01A1",
-    "size":  69310079,
-    "notes":  "栗子看海工具 1.2.0 原生版：单主程序 + version.dll + gate-assets；升级时自动清理旧 Python 组件并保留用户数据。",
-    "layout":  "bridge",
-    "requiredFiles":  [
-                          "🌰看海工具.exe",
-                          "version-dll-assets/version.dll",
-                          "gate-assets/"
-                      ],
-    "protectedFiles":  [
-                           "kanhai-config.json",
-                           "policy-capacity-defaults.json",
-                           "kanhai-policy.json",
-                           "update-settings.json",
-                           "main_app_config.json",
-                           "kanhai-layout.json",
-                           "features/records/config.json",
-                           "features/records/main_app_config.json",
-                           "features/records/capture-probe-verified.sha256",
-                           "features/records/_internal/main_app_config.json",
-                           "features/bili/settings.json"
-                       ],
-    "minVersion":  "1.1.13",
-    "bridgeCompatFiles":  [
-                              "features/bili/B站今日牢房查询.exe",
-                              "features/records/WarRecordSystem.exe",
-                              "features/records/engine/WarRecordEngine.exe",
-                              "features/bili/_internal/python313.dll",
-                              "features/records/_internal/python313.dll",
-                              "features/records/engine/_internal/python313.dll"
-                          ],
-    "rollback":  "不支持程序内降级：回滚请退出程序，解压 1.1.13 正式包后以其覆盖更新.ps1 重装；本次更新删除的旧组件在 \u003c安装目录\u003e\\.update-backups\\ 内。"
+  "version": "1.2.1",
+  "revision": 2026110906,
+  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.1/kanhai-suite-1.2.1-native.zip",
+  "sha256": "603A5A4A5236E8499117F52807D67A3F3E72A546F397251D9F3205CD11D57E58",
+  "size": 71551367,
+  "notes": "新增四档速度和伤害修复独立开关，优化开关页。1.1.13 用户请先从 GitHub Releases 下载并安装 1.2.0，再更新到 1.2.1。",
+  "layout": "native",
+  "requiredFiles": [
+    "🌰看海工具.exe",
+    "version-dll-assets/version.dll",
+    "gate-assets/",
+    "version-dll-assets/speed-battle.dll"
+  ],
+  "protectedFiles": [
+    "kanhai-config.json",
+    "policy-capacity-defaults.json",
+    "kanhai-policy.json",
+    "battle-phase.ini",
+    "update-settings.json",
+    "main_app_config.json",
+    "kanhai-layout.json",
+    "features/records/config.json",
+    "features/records/main_app_config.json",
+    "features/records/capture-probe-verified.sha256",
+    "features/records/_internal/main_app_config.json",
+    "features/bili/settings.json"
+  ],
+  "minVersion": "1.2.0",
+  "bridgeCompatFiles": null,
+  "rollback": "不支持程序内降级：回滚请退出程序，解压 1.1.13 正式包后以其覆盖更新.ps1 重装；本次更新删除的旧组件在 <安装目录>\\.update-backups\\ 内。"
 }
