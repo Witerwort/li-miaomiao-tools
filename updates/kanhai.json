@@ -1,9 +1,9 @@
 ﻿{
   "version": "1.2.1",
-  "revision": 2026110908,
-  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.1/kanhai-suite-1.2.1-proxy-2026110908.zip",
-  "sha256": "C18271D72B798533F0350AAEB21272345C41FF76D59A342C9ACDE50130619119",
-  "size": 71552127,
+  "revision": 2026110909,
+  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.1/kanhai-suite-1.2.1-proxy-2026110909.zip",
+  "sha256": "6A98CF347E44FBAA79AB178064B0AD35DE8376F9B631A2B09C1EAD938113EC84",
+  "size": 71551957,
   "notes": "栗子看海工具 1.2.1 原生版：单主程序 + version.dll + gate-assets；升级时自动清理旧 Python 组件并保留用户数据。",
   "layout": "native",
   "requiredFiles": [
