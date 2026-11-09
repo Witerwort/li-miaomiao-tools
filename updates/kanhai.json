@@ -1,10 +1,10 @@
-{
+﻿{
   "version": "1.2.1",
-  "revision": 2026110906,
-  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.1/kanhai-suite-1.2.1-native.zip",
-  "sha256": "603A5A4A5236E8499117F52807D67A3F3E72A546F397251D9F3205CD11D57E58",
-  "size": 71551367,
-  "notes": "新增四档速度和伤害修复独立开关，优化开关页。1.1.13 用户请先从 GitHub Releases 下载并安装 1.2.0，再更新到 1.2.1。",
+  "revision": 2026110908,
+  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.1/kanhai-suite-1.2.1-proxy-2026110908.zip",
+  "sha256": "C18271D72B798533F0350AAEB21272345C41FF76D59A342C9ACDE50130619119",
+  "size": 71552127,
+  "notes": "栗子看海工具 1.2.1 原生版：单主程序 + version.dll + gate-assets；升级时自动清理旧 Python 组件并保留用户数据。",
   "layout": "native",
   "requiredFiles": [
     "🌰看海工具.exe",
