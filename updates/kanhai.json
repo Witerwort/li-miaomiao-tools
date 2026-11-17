@@ -1,10 +1,10 @@
 {
-  "version": "1.2.4",
-  "revision": 202611121415,
-  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.4/kanhai-suite-1.2.4-signed.zip",
-  "sha256": "956AB7A8482D8A3B97A2AB25AEE6CBB1C5E3EEB09187CDCDA29E1372ACEFF402",
-  "size": 102178272,
-  "notes": "1.2.4 签名修订版：更新自动更新的验证密钥和签名清单地址。普通 1.2.4 用户可在清单发布后检测本次修订；1.2.3 因内置旧公钥，需从网站手动安装一次。原有府域产出、双城对比等功能保留。",
+  "version": "1.2.5",
+  "revision": 202611171431,
+  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.5/kanhai-suite-1.2.5.zip",
+  "sha256": "4BBE2F26DA9F7859F907F066ACFF66C951C72A84231A23A6055147407864ECE4",
+  "size": 173133916,
+  "notes": "新增离线个性和武将编辑、人物关系搜索多选、固定内心清除和V大兼容副本交换；包内说明改为《增量更新说明》和《使用说明书（小白版）》，覆盖1.2.2—1.2.5全部新增功能。内心DLL加载及扩展条目不足仍有已知兼容问题，详见说明书第9章。",
   "layout": "native",
   "requiredFiles": [
     "🌰看海工具.exe",
