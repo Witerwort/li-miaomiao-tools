@@ -1,10 +1,10 @@
 {
-  "version": "1.2.5",
-  "revision": 202611171431,
-  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.5/kanhai-suite-1.2.5.zip",
-  "sha256": "4BBE2F26DA9F7859F907F066ACFF66C951C72A84231A23A6055147407864ECE4",
-  "size": 173133916,
-  "notes": "新增离线个性和武将编辑、人物关系搜索多选、固定内心清除和V大兼容副本交换；包内说明改为《增量更新说明》和《使用说明书（小白版）》，覆盖1.2.2—1.2.5全部新增功能。内心DLL加载及扩展条目不足仍有已知兼容问题，详见说明书第9章。",
+  "version": "1.2.6",
+  "revision": 202611242200,
+  "url": "https://github.com/Witerwort/li-miaomiao-tools/releases/download/v1.2.6/kanhai-suite-1.2.6.zip",
+  "sha256": "731409613a81c60c07fa85634790a910b0e42c8285716bf83baba8d467f9c0dd",
+  "size": 251683634,
+  "notes": "战局实时编辑、按城市距离补全亲爱和厌恶、新增 041 与 042 个性效果、修正战斗组件的启动加载。升级后退出游戏并重新应用开关。完整操作见包内 Word 与 PDF 说明书。",
   "layout": "native",
   "requiredFiles": [
     "🌰看海工具.exe",
@@ -13,7 +13,11 @@
     "fonts/FOT-KsoTouryu大字.otf",
     "fonts/FOT-KsoTouryu小字.otf",
     "fonts/STXINGKA.TTF",
-    "version-dll-assets/speed-battle.dll"
+    "version-dll-assets/speed-battle.dll",
+    "map-editor/python/python.exe",
+    "map-editor/map-3d-editor/editor.py",
+    "map-editor/map-3d-editor/static/field-scene.js",
+    "map-editor/native/WebView2Loader.dll"
   ],
   "protectedFiles": [
     "kanhai-config.json",
@@ -27,7 +31,9 @@
     "features/records/main_app_config.json",
     "features/records/capture-probe-verified.sha256",
     "features/records/_internal/main_app_config.json",
-    "features/bili/settings.json"
+    "features/bili/settings.json",
+    "features/records/data/",
+    "logs/"
   ],
   "minVersion": "1.2.0",
   "bridgeCompatFiles": null,
